@@ -7,15 +7,57 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
+    <div id="piechart"></div>
+	<p><h3>Семейный бюджет</h3></p>
 
-    </div>
+	<div>
+		<label for="zkh"><b>ЖКХ</b> (500-15000 руб.)</label>
+		<input type="range" id="zkh" name="zkh" value="500" min="500" max="15000" step="500" oninput="zkhValue.textContent=this.value"/>
+		<span id="zkhValue">500</span><span> рублей</span>
+	</div>
+	<div>
+		<label for="food"><b>Продукты</b> (500-30000 руб.)</label>
+		<input type="range" id="food" name="food" value="500" min="500" max="30000" step="500" oninput="foodValue.textContent=this.value"/>
+		<span id="foodValue">500</span><span> рублей</span>
+	</div>
+	<div>
+		<label for="clothes"><b>Одежда</b> (500-50000 руб.)</label>
+		<input type="range" id="clothes" name="clothes" value="500" min="500" max="50000" step="500" oninput="clothesValue.textContent=this.value"/>
+		<span id="clothesValue">500</span><span> рублей</span>
+	</div>
+	<div>
+		<label for="technic"><b>Техника</b> (500-150000 руб.)</label>
+		<input type="range" id="technic" name="technic" value="500" min="500" max="150000" step="500" oninput="technicValue.textContent=this.value"/>
+		<span id="technicValue">500</span><span> рублей</span>
+	</div>
+	<div>
+		<label for="learning"><b>Обучение</b> (500-150000 руб.)</label>
+		<input type="range" id="learning" name="learning" value="500" min="500" max="150000" step="500" oninput="learningValue.textContent=this.value"/>
+		<span id="learningValue">500</span><span> рублей</span>
+	</div>
+	<div>
+		<label for="entertainment"><b>Развлечения</b> (500-100000 руб.)</label>
+		<input type="range" id="entertainment" name="entertainment" value="500" min="500" max="100000" step="500" oninput="entertainmentValue.textContent=this.value"/>
+		<span id="entertainmentValue">500</span><span> рублей</span>
+	</div>
+	<div>
+		<label for="travel"><b>Путешествия</b> (500-500000 руб.)</label>
+		<input type="range" id="travel" name="travel" value="500" min="500" max="500000" step="500" oninput="travelValue.textContent=this.value"/>
+		<span id="travelValue">500</span><span> рублей</span>
+	</div>
+	<div>
+		<label for="transport"><b>Транспорт</b> (500-30000 руб.)</label>
+		<input type="range" id="transport" name="transport" value="500" min="500" max="30000" step="500" oninput="transportValue.textContent=this.value"/>
+		<span id="transportValue">500</span><span> рублей</span>
+	</div>
 
     <div>
+    </br></br>
     <a href="first_page.html">Первая страница</a>
     <a href="index.html">Главная страница</a>
     <a href="third_page.html">Третья страница</a>
     </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="second_page.js"></script>
 </body>
 </html>
