@@ -1,21 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Третья страница</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div>
+        <h2>Фотоальбом</h2> Выберите раздел
+        <div id="myBtnContainer">
+            <button class="btn" onclick="filterSelection('all')"> Все фото</button>
+            <button class="btn" onclick="filterSelection('vacation')"> Отпуск в горах</button>
+            <button class="btn" onclick="filterSelection('museum')"> В музее</button>
+            <button class="btn" onclick="filterSelection('camp')"> На даче</button>
+        </div>
 
+        <div class="row">
+            <div class="column vacation">
+                <div class="content">
+                    <img src="img/mountains_1.jpeg" style="width:100%">
+                    <h4>Гора</h4>
+                    <p>Прекрасный вид</p>
+                </div>
+            </div>
+            <div class="column vacation">
+                <div class="content">
+                    <img src="img/mountains_2.jpeg" style="width:100%">
+                    <h4>Кафе</h4>
+                    <p>Тёплое, уютное кафе</p>
+                </div>
+            </div>
+            <div class="column vacation">
+                <div class="content">
+                    <img src="img/mountains_3.jpeg" style="width:100%">
+                    <h4>Гостиница</h4>
+                    <p>Рядом с озером</p>
+                </div>
+            </div>
+            <div class="column vacation">
+                <div class="content">
+                    <img src="img/mountains_4.jpeg" style="width:100%">
+                    <h4>Фуникулёр</h4>
+                    <p>Можно коснуться облаков</p>
+                </div>
+            </div>
+            <div class="column museum">
+                <div class="content">
+                    <img src="img/museum_1.jpeg" style="width:100%">
+                    <h4>Музей в городе N</h4>
+                    <p>Интересные экспонаты, с богатой историей</p>
+                </div>
+            </div>
+            <div class="column museum">
+                <div class="content">
+                    <img src="img/museum_2.jpeg" style="width:100%">
+                    <h4>Музей в городе N</h4>
+                    <p>Статуэтка древней династии</p>
+                </div>
+            </div>
+            <div class="column museum">
+                <div class="content">
+                    <img src="img/museum_3.jpeg" style="width:100%">
+                    <h4>Музей в городе N</h4>
+                    <p>Ваза великих мастеров</p>
+                </div>
+            </div>
+
+            <div class="column camp">
+                <div class="content">
+                    <img src="img/flowers_1.jpeg" style="width:100%">
+                    <h4>Дача</h4>
+                    <p>Цветы</p>
+                </div>
+            </div>
+            <div class="column camp">
+                <div class="content">
+                    <img src="img/flowers_2.jpeg" style="width:100%">
+                    <h4>Дача</h4>
+                    <p>Цветочный сад</p>
+                </div>
+            </div>
+            <div class="column camp">
+                <div class="content">
+                    <img src="img/flowers_3.jpeg" style="width:100%">
+                    <h4>Дача</h4>
+                    <p>Цветы за домом</p>
+                </div>
+            </div>
+            <div class="column camp">
+                <div class="content">
+                    <img src="img/potate.jpeg" style="width:100%">
+                    <h4>Огород</h4>
+                    <p>Пора вспомнить про картошку</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div>
-    <a href="first_page.html">Первая страница</a>
-    <a href="second_page.html">Вторая страница</a>
-    <a href="index.html">Главная страница</a>
+        </br></br>
+        <a href="first_page.html">Первая страница</a>
+        <a href="second_page.html">Вторая страница</a>
+        <a href="index.html">Главная страница</a>
     </div>
     <script src="third_page.js"></script>
 </body>
+
 </html>
