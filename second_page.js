@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.getElementById('entertainment').addEventListener('input', updateCharacterCard);
 	document.getElementById('travel').addEventListener('input', updateCharacterCard);
 	document.getElementById('transport').addEventListener('input', updateCharacterCard);
+	document.getElementById('saveButton').addEventListener('click', saveToTable);
 	
 	function updateCharacterCard() {
 		const zkh = document.getElementById('zkh').value;
@@ -31,10 +32,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			['Транспорт', parseInt(transport)]
 		]);
 		
-		var options = {'title':'Затраты в месяц', 'width':640, 'height':480};
+		var options = {'title':'Затраты в месяц', 'width':500, 'height':250};
 
 		var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 		chart.draw(data, options);
+	}
+
+	function saveToTable(){
+		const dataTable = document.getElementById('dataTable');
+		const newRow = document.createElement('tr');
+        newRow.innerHTML += '<td>' + document.getElementById('zkh').value + '</td>';
+        newRow.innerHTML += '<td>' + document.getElementById('food').value + '</td>';
+        newRow.innerHTML += '<td>' + document.getElementById('clothes').value + '</td>';
+        newRow.innerHTML += '<td>' + document.getElementById('technic').value + '</td>';
+		newRow.innerHTML += '<td>' + document.getElementById('learning').value + '</td>';
+        newRow.innerHTML += '<td>' + document.getElementById('entertainment').value + '</td>';
+        newRow.innerHTML += '<td>' + document.getElementById('travel').value + '</td>';
+        newRow.innerHTML += '<td>' + document.getElementById('transport').value + '</td>';
+
+        dataTable.appendChild(newRow);
 	}
 
 	
