@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const intelligence = document.getElementById('intelligence').value || '';
 
         charName.textContent = name || '';
-        charGender.src = gender === '' ? '' : (gender === 'male' ? 'man.png' : 'woman.png');
+        charGender.src = gender === '' ? '' : (gender === 'male' ? 'img/man.png' : 'img/woman.png');
 		document.getElementById('strength').max = 14 - (parseInt(agility) + parseInt(intelligence));
 		document.getElementById('agility').max = 14 - (parseInt(strength) + parseInt(intelligence));
 		document.getElementById('intelligence').max = 14 - (parseInt(strength) + parseInt(agility));
