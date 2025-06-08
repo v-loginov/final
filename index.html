@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-	<div>
 
+<body>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="first_page.html">Создание персонажа</a>
+        <a href="second_page.html">Семейный бюджет</a>
+        <a href="third_page.html">Фотоальбом</a>
     </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776; Меню</button>
 
     <div>
-    <a href="first_page.html">Первая страница</a>
-    <a href="second_page.html">Вторая страница</a>
-    <a href="third_page.html">Третья страница</a>
+        <p>
+            На первой странице реализована форма создания персонажа для игры.
+        </p>
+        <p>
+            На второй странице можно указать свои траты в определённый период и сохранить результаты на форме в таблицу.
+        </p>
+        <p>
+            На третьей странице реализован фотоальбом с категориями.
+        </p>
     </div>
-    
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "350px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+    </script>
+
 </body>
+
 </html>

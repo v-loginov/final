@@ -1,67 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Первая страница</title>
+    <title>Создание персонажа</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div>
-        <h1>Создание персонажа</h1>
-        
-        <form id="characterForm">
-            <p><label for="name">Имя персонажа:</label>
-            <input type="text" id="name" required /></p>
-            
-            <p><label for="gender">Пол:</label>
-            <select id="gender" required>
-                <option value="">Выберите...</option>
-                <option value="male">Мужской</option>
-                <option value="female">Женский</option>
-            </select></p>
-            
-            <p>Оставшееся количество нераспределённых очков: <label id="scorepoints">10</label></br>
-            Возможные классы: воин, вор, маг, рейнджер, паладин, монах</p>
-            <p><label for="strength"><b>Сила</b>(мин.1 макс. 12):</label>
-            <input type="number" min="1" max="10" id="strength" required value="1"/></p>
-            
-            <p><label for="agility"><b>Ловкость</b>(мин.1 макс. 12):</label>
-            <input type="number" min="1" max="10" id="agility" required value="1"/></p>
-            
-            <p><label for="intelligence"><b>Интеллект</b>(мин.1 макс. 12):</label>
-            <input type="number" min="1" max="10" id="intelligence" required value="1"/></p>
-           
-        </form>
-    
-            <div id="characterCardSection">
-            </br></br>
-            <h2>Карточка персонажа</h2>
-                <div id="characterCard" class="hidden">
-                    <table border="1">
-                        <tr height="225">
-                            <td width="159">
-                                <img id="charAvatar" src="">
-                            </td>
-                            <td width="400" >
-                                <p><h3 id="charName"></h3></p>
-                                <p><span id="charClass"></span></p>
-                                <p><span id="charSkills"></span></p>
-                                
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        
-        </div>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Главная</a>
+        <a href="second_page.html">Семейный бюджет</a>
+        <a href="third_page.html">Фотоальбом</a>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776; Меню</button>
 
     <div>
-    </br></br>
-    <a href="index.html">Главная страница</a>
-    <a href="second_page.html">Вторая страница</a>
-    <a href="third_page.html">Третья страница</a>
+        <h1>Создание персонажа</h1>
+
+        <form id="characterForm">
+            <p><label for="name">Имя персонажа:</label>
+                <input type="text" id="name" required />
+            </p>
+
+            <p><label for="gender">Пол:</label>
+                <select id="gender" required>
+                    <option value="">Выберите...</option>
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                </select>
+            </p>
+
+            <p>Оставшееся количество нераспределённых очков: <label id="scorepoints">10</label></br>
+                Возможные классы: воин, вор, маг, рейнджер, паладин, монах</p>
+            <p><label for="strength"><b>Сила</b>(мин.1 макс. 12):</label>
+                <input type="number" min="1" max="10" id="strength" required value="1" />
+            </p>
+
+            <p><label for="agility"><b>Ловкость</b>(мин.1 макс. 12):</label>
+                <input type="number" min="1" max="10" id="agility" required value="1" />
+            </p>
+
+            <p><label for="intelligence"><b>Интеллект</b>(мин.1 макс. 12):</label>
+                <input type="number" min="1" max="10" id="intelligence" required value="1" />
+            </p>
+
+        </form>
+
+        <div id="characterCardSection">
+            </br></br>
+            <h2>Карточка персонажа</h2>
+            <div id="characterCard" class="hidden">
+                <table border="1">
+                    <tr height="225">
+                        <td width="159">
+                            <img id="charAvatar" src="">
+                        </td>
+                        <td width="400">
+                            <p>
+                            <h3 id="charName"></h3>
+                            </p>
+                            <p><span id="charClass"></span></p>
+                            <p><span id="charSkills"></span></p>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
     </div>
-    <script src="js/first_page.js"></script>
+
+    <div>
+        <script>
+
+            function openNav() {
+                document.getElementById("mySidepanel").style.width = "350px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidepanel").style.width = "0";
+            }
+        </script>
+
+        <script src="js/first_page.js"></script>
 </body>
+
 </html>

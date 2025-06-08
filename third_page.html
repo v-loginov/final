@@ -9,6 +9,15 @@
 </head>
 
 <body>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Главная</a>
+        <a href="first_page.html">Создание персонажа</a>
+        <a href="second_page.html">Семейный бюджет</a>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776; Меню</button>
+
     <div>
         <h2>Фотоальбом</h2> Выберите раздел
         <div id="myBtnContainer">
@@ -100,12 +109,15 @@
         </div>
     </div>
 
-    <div>
-        </br></br>
-        <a href="first_page.html">Первая страница</a>
-        <a href="second_page.html">Вторая страница</a>
-        <a href="index.html">Главная страница</a>
-    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "350px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+    </script>
     <script src="js/third_page.js"></script>
 </body>
 
